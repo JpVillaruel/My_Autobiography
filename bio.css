@@ -293,19 +293,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .grid-container-1 .box-2 {
-  background: url(../img/ako.jpg) no-repeat;
+  background: url(img/ako.jpg) no-repeat;
 }
 .grid-container-1 .box-3 {
-  background: url(../img/mama.jpg) no-repeat;
+  background: url(img/mama.jpg) no-repeat;
 }
 .grid-container-1 .box-4 {
-  background: url(../img/Papa.jpg) no-repeat;
+  background: url(img/Papa.jpg) no-repeat;
 }
 .grid-container-1 .box-5 {
-  background: url(../img/kaye.jpg) no-repeat;
+  background: url(img/kaye.jpg) no-repeat;
 }
 .grid-container-1 .box-6 {
-  background: url(../img/cj.jpg) no-repeat;
+  background: url(img/cj.jpg) no-repeat;
 }
 .grid-container-1 :is(.box-2, .box-3, .box-4, .box-5, .box-6) {
   transition: 0.5s;
@@ -436,15 +436,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .grid-container-2 .box-2 {
-  background: url(../img/guitar.jpg) no-repeat;
+  background: url(img/guitar.jpg) no-repeat;
   background-size: 100% 100%;
 }
 .grid-container-2 .box-4 {
-  background: url(../img/dogplaying.jpg) no-repeat;
+  background: url(img/dogplaying.jpg) no-repeat;
   background-size: 100% 100%;
 }
 .grid-container-2 .box-3 {
-  background: url(../img/onlinegames.jpeg) no-repeat;
+  background: url(img/onlinegames.jpeg) no-repeat;
   background-size: cover;
 }
 
