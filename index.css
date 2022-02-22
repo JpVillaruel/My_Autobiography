@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@1,500&family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor: #333;
+  --primaryFont: "Bangers", cursive;
+  --secondaryFont: "Archivo Narrow", sans-serif;
+  --alternativeFont: "Shrikhand", cursive;
+  --glowClr:#ecf0f1;
+}
+
+body {
+  /* background: linear-gradient(20deg, #9b59b6, #3498db, #2ecc71); */
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* For the box Design */
+
+.container .box {
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  background-color: var(--bgColor);
+  position: absolute;
+  border-radius: 10px;
+}
+
+.container .box p {
+  text-transform: uppercase;
+  font-family: var(--alternativeFont);
+  text-align: center;
+  font-size: 50px;
+  color: var(--glowClr);
+  text-shadow: 0 0 10px var(--glowClr), 0 0 20px var(--glowClr);
+}
+
+/* For Tranlate */
+
+.container .box1 {
+  animation: translate 1s;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+@keyframes translate {
+  from {
+    transform: translateY(-25em);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* For Rotate */
+
+.container .box2 {
+  animation: rotate 1s;
+  animation-delay: 4s;
+  transform-style: preserve-3d;
+  opacity: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateX(-360deg) translateZ(100px);
+    opacity: 1;
+  }
+}
+
+/* For Scale */
+
+.container .box3 {
+  animation: scale 0.75s forwards;
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+@keyframes scale {
+  from {
+    width: 80px;
+    height: 70px;
+    opacity: 1;
+  }
+
+  to {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+/* For Welcome animation */
+
+.container2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: opacity 5.75s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.container2 .text1 {
+  position: relative;
+  background-color: var(--bgColor);
+  font-size: 70px;
+  letter-spacing: 10px;
+  color: #3498db;
+  font-family: var(--primaryFont);
+  animation: overflow 2s ease;
+  animation-delay: 5.75s;
+}
+
+@keyframes overflow {
+  0% {
+    color: var(--bgColor);
+    margin-bottom: -40px;
+  }
+
+  40% {
+    letter-spacing: 30px;
+    margin-bottom: -40px;
+  }
+
+  80% {
+    letter-spacing: 20px;
+    margin-bottom: -40px;
+  }
+}
+
+.container2 .text2 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: var(--alternativeFont);
+  letter-spacing: 2px;
+
+  background: linear-gradient(20deg, #9b59b6, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/****************************** start button *******************************8*/
+
+.container2 a {
+  text-decoration: none;
+  color: var(--glowClr);
+  font-family: var(--secondaryFont);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+button {
+  --btnColor: #2ecc71;
+  all: inherit;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--btnColor);
+  border-radius: 5px;
+  padding: 0.25em 0.75em;
+  margin: 1em;
+  animation: button 3.25s ease-out forwards;
+  animation-delay: 5.25s;
+  transition: 0.5s;
+}
+
+@keyframes button {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+button:hover {
+  color: var(--glowClr);
+  text-shadow: 0 0 5px var(--glowClr);
+  background-color: var(--btnColor);
+  box-shadow: 0 0 5px var(--btnColor), 0 0 10px var(--btnColor), 0 0 25px var(--btnColor),
+    0 0 50px var(--btnColor);
+  transition-delay: 0.5s;
+  border: 1px solid var(--glowClr);
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83%;
+  height: 100%;
+  background-color: #2ecc71;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+button::before {
+  transform: skew(30deg) translateX(140%);
+}
+button:hover::before {
+  transform: skew(30deg) translateX(60%);
+}
+
+button::after {
+  transform: skew(30deg) translateX(-120%);
+}
+
+button:hover::after {
+  transform: skew(30deg) translateX(-40%);
+}
